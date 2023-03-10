@@ -37,9 +37,9 @@ describe('User Creation Controller', () => {
         });
 
         it('should return 500 when error occurs', async () => {
-                
+
             jest.spyOn(addNewUserServices, 'addNewUserInDB').mockRejectedValue(new Error('Error creating user'));
-    
+
             await addNewUserController.addNewUser(mockReq, mockRes);
             expect(mockRes.status).toHaveBeenCalledWith(500);
             expect(mockRes.json).toHaveBeenCalledWith({

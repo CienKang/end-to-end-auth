@@ -11,13 +11,13 @@ const loginUserFromDB = async (email, password) => {
         }
     });
 
-    if(user === null){
+    if (user === null) {
         throw new NotFoundError('User not found in database');
     }
 
     const isPasswordCorrect = await bcrypt.compare(password, user.hashedPassword);
-    if(!isPasswordCorrect){
-        throw new  NotFoundError('Password is incorrect');
+    if (!isPasswordCorrect) {
+        throw new NotFoundError('Password is incorrect');
     }
 
     const userData = {
@@ -26,7 +26,7 @@ const loginUserFromDB = async (email, password) => {
     };
 
     const tokenGenerated = jwtUtils.generateJWT(userData);
-    await redisUtils.storeToken(email,tokenGenerated);
+    await redisUtils.storeToken(email, tokenGenerated);
     return tokenGenerated;
 };
 

@@ -6,6 +6,6 @@ const middleWare = require('../middlewares/validator.middleware');
 const validateTokenController = require('../controllers/validateToken.controller');
 
 app.route('/token/validate')
-    .post(middleWare.authHeaderValidator,validateTokenController.validateToken);
+    .post(middleWare.authHeaderValidator, validateTokenController.validateToken);
 
 module.exports = app;

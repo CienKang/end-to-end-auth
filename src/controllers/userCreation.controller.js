@@ -3,7 +3,7 @@ const addNewUserServices = require('../services/addNewUser.services');
 const addNewUser = async (req, res) => {
     const { email, password } = req.body;
 
-    try{
+    try {
         const result = await addNewUserServices.addNewUserInDB(email, password);
         res.status(201).json({
             message: 'User created successfully',

@@ -6,7 +6,7 @@ const validateJWTToken = async (token) => {
     const result = await jwtUtils.verifyJWT(token);
     const redisToken = await redisUtils.getToken(result.email);
 
-    if(redisToken != token){
+    if (redisToken != token) {
         throw new Error('Token not found in redis');
     }
     return result;

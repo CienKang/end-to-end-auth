@@ -44,7 +44,7 @@ describe('Login User Controller', () => {
                     password: 'test'
                 }
             });
-  
+
         });
 
         it('should return 401 when password is incorrect', async () => {

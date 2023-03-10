@@ -6,8 +6,8 @@ const schemas = require('../schemas/schemas');
 const middleWare = require('../middlewares/validator.middleware');
 
 app.route('/user')
-    .post( 
-        middleWare.bodyValidator(schemas.newUserSchema) ,
+    .post(
+        middleWare.bodyValidator(schemas.newUserSchema),
         addNewUserConrtoller.addNewUser
     );
 

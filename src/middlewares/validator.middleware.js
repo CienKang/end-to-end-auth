@@ -20,4 +20,4 @@ const authHeaderValidator = (req, res, next) => {
     }
 };
 
-module.exports = { bodyValidator ,authHeaderValidator } ;
+module.exports = { bodyValidator, authHeaderValidator };

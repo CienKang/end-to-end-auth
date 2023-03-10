@@ -48,6 +48,6 @@ describe('Validate Token Controller', () => {
                 message: 'Invalid token'
             });
         });
-        
+
     });
 });

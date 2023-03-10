@@ -17,4 +17,4 @@ class InternalServerError extends HTTPError {
     }
 }
 
-module.exports = { HTTPError , NotFoundError , InternalServerError};
+module.exports = { HTTPError, NotFoundError, InternalServerError };

@@ -1,27 +1,27 @@
-module.exports={
+module.exports = {
     'development': {
-        'email': 'postgres',
+        'username': 'postgres',
         'password': null,
         'database': 'authDB',
         'host': '127.0.0.1',
         'dialect': 'postgres'
     },
     'test': {
-        'email': 'postgres',
+        'username': 'postgres',
         'password': null,
         'database': 'authDB',
         'host': '127.0.0.1',
         'dialect': 'postgres'
     },
     'production': {
-        'email': 'postgres',
+        'username': 'postgres',
         'password': null,
         'database': 'authDB',
         'host': '127.0.0.1',
         'dialect': 'postgres'
     },
     'docker': {
-        'email': 'postgres',
+        'username': 'postgres',
         'password': 'postgres',
         'database': 'authDB',
         'host': 'db',
